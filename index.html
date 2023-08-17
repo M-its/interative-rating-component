@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="css/styles.css" />
+
+        <title>Frontend Mentor | Interactive rating component</title>
+    </head>
+    <body>
+        <!-- <div id="change-theme">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox">
+                <div id="toggler"></div>
+            </label>
+        </div> -->
+        <main>
+            <!-- Rating state start -->
+            <form method="GET" action="/">
+                <div class="rating-content">
+                    <img
+                        class="star"
+                        src="images/icon-star.svg"
+                        alt="icone de estrela"
+                    />
+
+                    <h2>How did we do?</h2>
+
+                    <p class="feedback-text">
+                        Please let us know how we did with your support request.
+                        All feedback is appreciated to help us improve our
+                        offering!
+                    </p>
+                </div>
+                <div class="ratings">
+                    <input
+                        id="rb-1"
+                        class="radio-input"
+                        type="radio"
+                        name="rating"
+                        value="1"
+                    />
+                    <label for="rb-1">
+                        <span class="rating">1</span>
+                    </label>
+
+                    <input
+                        id="rb-2"
+                        class="radio-input"
+                        type="radio"
+                        name="rating"
+                        value="2"
+                    />
+                    <label for="rb-2">
+                        <span class="rating">2</span>
+                    </label>
+
+                    <input
+                        id="rb-3"
+                        class="radio-input"
+                        type="radio"
+                        name="rating"
+                        value="3"
+                    />
+                    <label for="rb-3">
+                        <span class="rating">3</span>
+                    </label>
+
+                    <input
+                        id="rb-4"
+                        class="radio-input"
+                        type="radio"
+                        name="rating"
+                        value="4"
+                    />
+                    <label for="rb-4">
+                        <span class="rating">4</span>
+                    </label>
+
+                    <input
+                        id="rb-5"
+                        class="radio-input"
+                        type="radio"
+                        name="rating"
+                        value="5"
+                    />
+                    <label for="rb-5">
+                        <span class="rating">5</span>
+                    </label>
+                </div>
+
+                <button type="submit">SUBMIT</button>
+            </form>
+
+            <!-- Rating state end -->
+
+            <!-- Thank you state start -->
+
+            <div class="modal">
+                <img
+                    class="phone"
+                    src="images/illustration-thank-you.svg"
+                    alt="phone ilustration sending feedback"
+                />
+                <div class="rating">
+                    <p class="rating-text">
+                        You selected <span id="given-rate"> 4 </span>out of 5
+                    </p>
+                </div>
+                <h2 class="thank-you-title">Thank you!</h2>
+                <p class="thank-you-text">
+                    We appreciate you taking the time to give a rating. If you
+                    ever need more support, don&apos;t hesitate to get in touch!
+                </p>
+            </div>
+
+            <!-- Thank you state end -->
+        </main>
+
+        <footer>
+            <div class="attribution">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    >Frontend Mentor</a
+                >. Coded by
+                <a href="https://github.com/M-its" target="_blank"
+                    >Mitsrael Souza</a
+                >.
+            </div>
+        </footer>
+        <script src="scripts.js"></script>
+    </body>
+</html>
