@@ -4,6 +4,8 @@ const radioSpan = document.querySelectorAll("span.rating")
 const form = document.querySelector("form#rating-form")
 const modal = document.querySelector(".modal")
 const givenRate = document.querySelector("span#given-rate")
+const button = document.querySelector("button")
+let alert = null
 
 function chageRadioSpanBackground() {
     radioSpan.forEach((element) => {
@@ -29,7 +31,12 @@ function displayModal() {
             givenRate.innerHTML = ` ${rating} `
             modal.style.display = "flex"
         } else {
-            alert("Please select a valid rating")
+            if (alert === null) {
+                alert = button.insertAdjacentHTML(
+                    "afterend",
+                    "<p class='alert'>*Please select a valid rating</p>"
+                )
+            }
         }
     })
 }
