@@ -5,7 +5,6 @@ const form = document.querySelector("form#rating-form")
 const modal = document.querySelector(".modal")
 const givenRate = document.querySelector("span#given-rate")
 const button = document.querySelector("button")
-let alert = null
 
 function chageRadioSpanBackground() {
     radioSpan.forEach((element) => {
@@ -24,6 +23,8 @@ function chageRadioSpanBackground() {
 }
 
 function displayModal() {
+    let alert = null
+
     form.addEventListener("submit", (event) => {
         event.preventDefault()
         if (rating !== null) {
