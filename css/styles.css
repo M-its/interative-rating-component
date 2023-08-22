@@ -216,31 +216,23 @@ body footer .attribution a:hover {
   }
   body main .modal .rating-text {
     padding-top: 2px;
-    color: hsl(25, 97%, 53%);
   }
   body main .modal h2.thank-you-title {
     font-size: 3rem;
-    font-weight: 700;
     margin-top: 12px;
     margin-bottom: -10px;
-  }
-  body main .modal p.thank-you-text {
-    color: hsl(217, 12%, 63%);
-    text-align: center;
-    line-height: 2.2rem;
-    margin-bottom: 5px;
   }
   body main form {
     gap: 1.5rem;
   }
-  body main form img.star {
+  body main form .rating-content img.star {
     padding: 1.5rem;
   }
-  body main form h2 {
+  body main form .rating-content h2 {
     margin-top: 1.5rem;
     font-size: 2.8rem;
   }
-  body main form p.feedback-text {
+  body main form .rating-content p.feedback-text {
     line-height: 2.5rem;
   }
   body main form .ratings span {
