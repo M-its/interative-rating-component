@@ -203,34 +203,28 @@ body footer .attribution a:hover {
     width: 410px;
   }
   body main .modal {
-    color: white;
-    z-index: 1;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    margin: 10px;
+    gap: 2rem;
   }
-  body main img.phone {
-    margin-top: 5px;
+  body main .modal img.phone {
     width: 160px;
+    margin-top: 5px;
   }
-  body main .rating {
-    background-color: hsl(213, 19%, 18%);
-    padding: 6px 12px;
-    border-radius: 30px;
-    margin-top: 1.5rem;
+  body main .modal .rating {
+    padding: 6px 16px;
+    letter-spacing: 0.1rem;
   }
-  body main .rating-text {
+  body main .modal .rating-text {
     padding-top: 2px;
     color: hsl(25, 97%, 53%);
   }
-  body main h2.thank-you-title {
-    font-size: 2.4rem;
+  body main .modal h2.thank-you-title {
+    font-size: 3rem;
     font-weight: 700;
     margin-top: 12px;
+    margin-bottom: -10px;
   }
-  body main p.thank-you-text {
+  body main .modal p.thank-you-text {
     color: hsl(217, 12%, 63%);
     text-align: center;
     line-height: 2.2rem;
