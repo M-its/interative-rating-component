@@ -1,0 +1,241 @@
+@use 'variables'
+@use 'resets'
+
+:root 
+    /* Fonts */
+    font-family: variables.$main-font
+    font-size: variables.$global-font-size
+    -webkit-font-smoothing: antialiased
+
+body 
+    height: 100vh
+    width: 100vw
+    font-weight: 400
+    font-size: variables.$paragraph-font-size
+    background-color: variables.$very-dark-blue
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    main
+        width: 345px
+        padding: 30px 25px
+        border-radius: 15px
+
+        display: flex
+        flex-direction: column
+        justify-items: center
+        align-items: flex-start
+        gap: 1.5rem
+
+        background: variables.$dark-blue
+        background: linear-gradient(variables.$dark-blue -50%, variables.$very-dark-blue 200%)
+
+        .modal 
+            color: white
+            z-index: 1
+            display: none
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            gap: 1rem
+
+            img.phone 
+                margin-top: 5px
+                width: 160px
+
+            .rating 
+                background-color: variables.$dark-blue
+                padding: 6px 12px 
+                border-radius: 30px 
+                margin-top: 1.5rem 
+
+                &-text 
+                    padding-top: 2px
+                    color: variables.$orange
+            
+            h2.thank-you-title
+                font-size: 2.4rem
+                font-weight: 700
+                margin-top: 12px
+               
+            p.thank-you-text
+                color: variables.$light-grey
+                text-align: center
+                line-height: 2.2rem
+                margin-bottom: 5px
+
+        form 
+            width: 100%
+            display: flex
+            flex-direction: column
+            gap: 1.5rem
+
+            .rating-content 
+                display: flex
+                flex-direction: column
+                justify-items: center
+                align-items: flex-start
+                gap:1.5rem
+
+                img.star
+                    padding: 1rem
+                    background-color: variables.$dark-blue
+                    border-radius: 50%
+                    transition: filter 0.3s ease-in-out
+                
+                img.star:hover 
+                    transition: filter 0.3s ease-in-out
+                    filter: brightness(1.15)
+
+                h2 
+                    color: variables.$white
+                    font-weight: 700
+                    
+                p.feedback-text
+                    color: variables.$light-grey
+                    margin-bottom: 10px
+                    line-height: 2rem
+
+            .ratings
+                display: grid
+                grid-auto-flow: column
+                justify-content: space-between
+                justify-items: center
+
+                .radio-input 
+                    opacity: 0
+                    position: absolute
+                
+                span                
+                    width: 45px
+                    height: 45px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    background-color: variables.$dark-blue
+                    border-radius: 50%
+                    color: variables.$light-grey
+                    transition: 0.3s ease-in-out
+                
+                span:hover 
+                    transition: 0.3s ease-in-out
+                    background-color: variables.$orange
+                    color: variables.$white
+                    cursor: pointer
+
+            button
+                width: 100%
+                border: none
+                padding: 15px
+                border-radius: 30px
+                margin: 10px 0 5px 0
+
+                font-size: 1.5rem
+                letter-spacing: 0.1rem
+                color: variables.$white
+                
+                background: variables.$orange
+                transition: 0.3s ease-in-out
+        
+        button:hover 
+            transition: 0.3s ease-in-out
+            color: variables.$orange
+            background: variables.$white
+
+            cursor: pointer
+
+        @keyframes shake-horizontal
+            0%, 100% 
+                -webkit-transform: translateX(0)
+                        transform: translateX(0)
+            10%, 30%, 50%, 70% 
+                -webkit-transform: translateX(-4px)
+                        transform: translateX(-4px)
+            20%, 40%, 60% 
+                -webkit-transform: translateX(4px)
+                        transform: translateX(4px)
+            80% 
+                -webkit-transform: translateX(2px)
+                        transform: translateX(2px)
+            90% 
+                -webkit-transform: translateX(-2px)
+                        transform: translateX(-2px)
+
+        .alert 
+            color: variables.$orange
+            padding: 0.5rem 1rem
+            border-radius: 15px
+            background-color: variables.$dark-blue
+            align-self: center
+            animation-name: shake-horizontal
+            animation-duration: 1s
+
+    footer 
+        position: fixed
+        bottom: 10px
+        display: flex
+        justify-content: center
+        align-items: center
+
+        .attribution 
+            font-size: 1.6rem
+            text-align: center
+            color: variables.$white
+
+        .attribution a 
+            color: variables.$light-grey
+            transition: 0.3s ease-in-out
+
+        .attribution a:hover 
+            color: variables.$orange
+            transition: 0.3s ease-in-out
+
+@media screen and (min-width: 480px) 
+    body 
+
+        main 
+            width: 410px
+
+            .modal 
+                margin: 10px
+                gap: 2rem
+
+                img.phone 
+                    width: 160px
+                    margin-top: 5px
+
+                .rating 
+                    padding: 6px 16px 
+                    letter-spacing: 0.1rem
+
+                    &-text 
+                        padding-top: 2px
+                
+                h2.thank-you-title
+                    font-size: 3rem
+                    margin-top: 12px
+                    margin-bottom: -10px
+
+            form 
+                gap: 1.5rem
+
+                .rating-content
+                    img.star
+                        padding: 1.5rem
+
+                    h2 
+                        margin-top: 1.5rem
+                        font-size: 2.8rem
+
+                    p.feedback-text
+                        line-height: 2.5rem
+
+                .ratings
+
+                    span                
+                        width: 55px
+                        height: 55px
+                        font-size: 1.8rem
+    
