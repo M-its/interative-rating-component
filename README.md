@@ -17,7 +17,7 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 ## Overview
 
-This project is an example of an functional rating component.
+This project is an example of a functional rating component.
 
 ### The challenge
 
